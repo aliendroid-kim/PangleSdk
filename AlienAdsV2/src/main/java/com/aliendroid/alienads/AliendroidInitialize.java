@@ -13,7 +13,12 @@ import com.bytedance.sdk.openadsdk.api.init.PAGSdk;
 public class AliendroidInitialize {
 
     public static void SelectAdsAdmob(Activity activity, String selectAdsBackup, String idInitialize) {
-        initSdk(idInitialize);
+        try {
+            initSdk(idInitialize);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void SelectAdsGoogleAds(Activity activity, String selectAdsBackup, String idInitialize) {

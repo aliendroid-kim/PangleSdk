@@ -55,18 +55,23 @@ public class AliendroidReward {
     public static boolean SHOW_ALIEN_VIEW=false;
     public static void LoadRewardAdmob(Activity activity, String selectBackupAds, String idReward, String idBackupReward) {
 
-        PAGRewardedAd.loadAd(idReward,
-                new PAGRewardedRequest(),
-                new PAGRewardedAdLoadListener() {
-                    @Override
-                    public void onError(int code, String message) {
-                    }
+        try {
+            PAGRewardedAd.loadAd(idReward,
+                    new PAGRewardedRequest(),
+                    new PAGRewardedAdLoadListener() {
+                        @Override
+                        public void onError(int code, String message) {
+                        }
 
-                    @Override
-                    public void onAdLoaded(PAGRewardedAd rewardedAd) {
-                        rewardedAdPangle =  rewardedAd;
-                    }
-                });
+                        @Override
+                        public void onAdLoaded(PAGRewardedAd rewardedAd) {
+                            rewardedAdPangle =  rewardedAd;
+                        }
+                    });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

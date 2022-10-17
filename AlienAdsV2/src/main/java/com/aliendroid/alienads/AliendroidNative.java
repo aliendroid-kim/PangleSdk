@@ -136,10 +136,11 @@ public class AliendroidNative {
             public void onAdLoaded(PAGNativeAd pagNativeAd) {
                 PAGNativeAdData adData = pagNativeAd != null ? pagNativeAd.getNativeAdData() : null;
                 View nativeAdView = LayoutInflater.from(activity).inflate(R.layout.pangle_big_native, null);
-                TextView mTitle = (TextView) nativeAdView.findViewById(R.id.ad_title);
-                TextView mDescription = (TextView) nativeAdView.findViewById(R.id.ad_desc);
-                ImageView mIcon = (ImageView) nativeAdView.findViewById(R.id.ad_icon);
-                Button mCreativeButton = (Button) nativeAdView.findViewById(R.id.creative_btn);
+                TextView mTitle = (TextView) nativeAdView.findViewById(R.id.ad_title_big);
+                TextView mDescription = (TextView) nativeAdView.findViewById(R.id.ad_desc_big);
+                ImageView mIcon = (ImageView) nativeAdView.findViewById(R.id.ad_icon_big);
+                Button mCreativeButton = (Button) nativeAdView.findViewById(R.id.creative_btn_big);
+                FrameLayout mVideo = (FrameLayout) nativeAdView.findViewById(R.id.ad_video_big) ;
                 mTitle.setText(adData.getTitle());
                 mDescription.setText(adData.getDescription());
                 PAGImageItem icon = adData.getIcon();
@@ -152,6 +153,7 @@ public class AliendroidNative {
                 creativeViewList.add(mCreativeButton);
                 creativeViewList.add(mIcon);
                 creativeViewList.add(mTitle);
+                creativeViewList.add(mVideo);
 
                 pagNativeAd.registerViewForInteraction((ViewGroup) nativeAdView, null, creativeViewList, layNative, new PAGNativeAdInteractionListener() {
                     @Override

@@ -32,17 +32,22 @@ public class MyApplication extends Application {
         alienOpenAds = new AlienOpenAds(this);
         adManagerHolder = new AdManagerHolder(this);
 
-        PAGSdk.addPAGInitCallback(new PAGSdk.PAGInitCallback() {
-            @Override
-            public void success() {
-                Log.i(TAG, "PAGInitCallback success: addPAGInitCallback");
-            }
+        try {
+            PAGSdk.addPAGInitCallback(new PAGSdk.PAGInitCallback() {
+                @Override
+                public void success() {
+                    Log.i(TAG, "PAGInitCallback success: addPAGInitCallback");
+                }
 
-            @Override
-            public void fail(int code, String msg) {
-                Log.i(TAG, "PAGInitCallback fail: addPAGInitCallback");
-            }
-        });
+                @Override
+                public void fail(int code, String msg) {
+                    Log.i(TAG, "PAGInitCallback fail: addPAGInitCallback");
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
 
     }

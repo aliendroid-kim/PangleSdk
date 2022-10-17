@@ -32,7 +32,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/advertiser_textView"
+                    android:id="@+id/advertiser_textView_big"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -43,7 +43,7 @@
             </RelativeLayout>
 
             <FrameLayout
-                android:id="@+id/ad_options_view"
+                android:id="@+id/ad_options_view_big"
                 android:layout_width="14dp"
                 android:layout_height="14dp"
                 android:layout_marginTop="2dp"
@@ -62,14 +62,13 @@
                 android:layout_height="50dp">
 
                 <ImageView
-                    android:id="@+id/ad_icon"
+                    android:id="@+id/ad_icon_big"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                  />
+                    android:layout_marginBottom="5dp" />
             </RelativeLayout>
 
             <LinearLayout
@@ -82,7 +81,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/ad_title"
+                    android:id="@+id/ad_title_big"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -90,7 +89,7 @@
                     tools:text="Title" />
 
                 <TextView
-                    android:id="@+id/ad_desc"
+                    android:id="@+id/ad_desc_big"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="2"
@@ -101,23 +100,23 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/creative_btn"
+                android:id="@+id/creative_btn_big"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="5dp"
                 android:background="@color/colorAccent"
-                android:backgroundTint="@color/colorPrimaryDark"
+                android:backgroundTint="@color/button_install"
                 android:textColor="@android:color/white"
                 android:textSize="10sp"
-                app:backgroundTint="@color/colorPrimary"
+                app:backgroundTint="@color/button_install"
                 tools:ignore="TouchTargetSizeCheck"
                 tools:text="Install" />
 
         </LinearLayout>
 
         <FrameLayout
-            android:id="@+id/ad_video"
+            android:id="@+id/ad_video_big"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="4dp"

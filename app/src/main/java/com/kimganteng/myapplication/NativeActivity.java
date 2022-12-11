@@ -28,7 +28,7 @@ public class NativeActivity extends AppCompatActivity {
                 "","","","","");
 
         RelativeLayout layMediumAds = findViewById(R.id.layMediumNatives);
-        AliendroidNative.MediumNativeAdmob(this, layMediumAds,Select_Backup_Ads,MainNatives,BackupNatives,
+        AliendroidNative.SmallNativeAdmobRectangle(this, layMediumAds,Select_Backup_Ads,MainNatives,BackupNatives,
                 "","","","","");
         AliendroidNative.onLoadMediumNativesAdmob = new OnLoadMediumNativesAdmob() {
             @Override

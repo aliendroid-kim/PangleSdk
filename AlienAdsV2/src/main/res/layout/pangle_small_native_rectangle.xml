@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="match_parent"
     android:background="@color/native_background">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
@@ -23,7 +23,8 @@
                 android:background="@color/native_button"
                 android:gravity="center"
                 android:text="Ads"
-                android:textColor="@android:color/white"
+
+                android:textColor="@color/native_text_button"
                 android:textSize="10sp" />
 
             <RelativeLayout
@@ -32,7 +33,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/advertiser_textView_big"
+                    android:id="@+id/advertiser_textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -42,7 +43,7 @@
             </RelativeLayout>
 
             <FrameLayout
-                android:id="@+id/ad_options_view_big"
+                android:id="@+id/ad_options_view"
                 android:layout_width="14dp"
                 android:layout_height="14dp"
                 android:layout_marginTop="2dp"
@@ -51,76 +52,76 @@
 
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/ad_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="50dp"
-                android:layout_height="50dp">
-
-                <ImageView
-                    android:id="@+id/ad_icon_big"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp" />
-            </RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/ad_title_big"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/ad_title"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
                     android:textColor="@color/native_title"
                     android:textSize="10sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/ad_desc_big"
+                    android:id="@+id/ad_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:lines="2"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
                     android:textColor="@color/native_description"
                     android:textSize="10sp" />
-
             </LinearLayout>
 
             <Button
-                android:id="@+id/creative_btn_big"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
+                android:id="@+id/creative_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="5dp"
-                android:background="@color/native_button"
-                android:backgroundTint="@color/native_button"
-                android:textColor="@color/native_text_button"
+                android:background="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"
                 android:textSize="10sp"
-                app:backgroundTint="@color/button_install"
+                app:backgroundTint="@color/colorPrimary"
                 tools:ignore="TouchTargetSizeCheck"
                 tools:text="Install" />
 
         </LinearLayout>
 
         <FrameLayout
-            android:id="@+id/ad_video_big"
+            android:id="@+id/ad_video"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:maxHeight="150dp"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintDimensionRatio="W,16:9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

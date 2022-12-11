@@ -193,5 +193,71 @@ public class AliendroidNative {
 
     }
 
+    //Rectangle
+    public static void SmallNativeStartAppRectangle(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup) {
+
+    }
+
+    public static void SmallNativeAdmobRectangle(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup, String Hpk1,
+                                                 String Hpk2, String Hpk3, String Hpk4, String Hpk5) {
+        PAGNativeRequest request = new PAGNativeRequest();
+        PAGNativeAd.loadAd(nativeId, request, new PAGNativeAdLoadListener() {
+            @Override
+            public void onError(int code, String message) {
+
+            }
+
+            @Override
+            public void onAdLoaded(PAGNativeAd pagNativeAd) {
+                PAGNativeAdData adData = pagNativeAd != null ? pagNativeAd.getNativeAdData() : null;
+                View nativeAdView = LayoutInflater.from(activity).inflate(R.layout.pangle_small_native_rectangle, null);
+                TextView mTitle = (TextView) nativeAdView.findViewById(R.id.ad_title);
+                TextView mDescription = (TextView) nativeAdView.findViewById(R.id.ad_desc);
+                ImageView mIcon = (ImageView) nativeAdView.findViewById(R.id.ad_icon);
+                Button mCreativeButton = (Button) nativeAdView.findViewById(R.id.creative_btn);
+                mTitle.setText(adData.getTitle());
+                mDescription.setText(adData.getDescription());
+                PAGImageItem icon = adData.getIcon();
+                if (icon != null && icon.getImageUrl() != null) {
+                    Glide.with(activity).load(icon.getImageUrl()).into(mIcon);
+                }
+                mCreativeButton.setText(TextUtils.isEmpty(adData.getButtonText()) ? activity.getString(R.string.tt_native_banner_download) : adData.getButtonText());
+
+                List<View> creativeViewList = new ArrayList<>();
+                creativeViewList.add(mCreativeButton);
+                creativeViewList.add(mIcon);
+                creativeViewList.add(mTitle);
+
+                pagNativeAd.registerViewForInteraction((ViewGroup) nativeAdView, null, creativeViewList, layNative, new PAGNativeAdInteractionListener() {
+                    @Override
+                    public void onAdShowed() {
+
+                    }
+
+                    @Override
+                    public void onAdClicked() {
+
+                    }
+
+                    @Override
+                    public void onAdDismissed() {
+
+                    }
+                });
+                layNative.addView(nativeAdView);
+            }
+        });
+
+    }
+
+    public static void SmallNativeMaxRectangle(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup) {
+    }
+
+    public static void SmallNativeFanRectangle(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup) {
+    }
+
+
+    public static void SmallNativeAlienRectangle(Activity activity, RelativeLayout layNative, String selectAdsBackup, String nativeId, String idNativeBackup) {
+    }
 
 }

@@ -15,6 +15,7 @@ public class MyApplication extends Application {
     private static AlienOpenAds alienOpenAds;
     private static InitializeAlienAds sdkads;
     private static AdManagerHolder adManagerHolder;
+    private static AlienNotif notif;
     //Uranus
     @Override
     public void onCreate() {
@@ -48,6 +49,7 @@ public class MyApplication extends Application {
             e.printStackTrace();
         }
 
+        notif = new AlienNotif(this);
 
 
     }

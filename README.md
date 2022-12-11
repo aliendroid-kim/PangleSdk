@@ -32,7 +32,7 @@ lalu tambahan Maven di Gradle Project
 <br />1. Multy Ads memiliki ukuran file 10-15mb dengan sistem switch, backup, open bidding dan mediasi, sehingga ukuran file akan menjadi lebih besar.
 <br />2. Kekurangan dari single SDK tidak bisa melakukan backup maupun switch sehingga setiap akan mengganti ads harus melakukan update aplikasi, 
 dan SDK Pangle memiliki ukuran file yang sangat besar <br />
-3. Untuk mengganti SDK silahkan buka build.gradle dan ganti SDK <strong>AlienMultyAds, </strong>ganti dengan libs iklan pangle</p>
+3. Untuk mengganti SDK silahkan buka build.gradle dan ganti SDK <strong>AlienMultyAds </strong>dengan libs iklan pangle</p>
 <p><img src="https://aliendro.id/uploads/blog/202210/img_635264a9b00592-48631043-54973966.jpg" alt="" width="793" height="538" /></p>
 <p>4. Pada beberapa Ads, membutuhkan maven untuk melakukan konfigurasi sdk, Maven terletak di settings.gradle atau build.gradle project</p>
 <p><img src="https://aliendro.id/uploads/blog/202210/img_6352656b2fac19-97214146-62944342.jpg" alt="" width="794" height="401" /></p>

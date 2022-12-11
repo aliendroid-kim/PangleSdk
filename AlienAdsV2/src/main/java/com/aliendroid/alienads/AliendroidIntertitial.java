@@ -134,18 +134,23 @@ public class AliendroidIntertitial {
     public static void ShowIntertitialAdmob(Activity activity, String selectAdsBackup, String idIntertitial, String idIntertitialBackup,
                                             int interval, String Hpk1,
                                             String Hpk2, String Hpk3, String Hpk4, String Hpk5) {
-        if (counter >= interval) {
-            if (interstitialAdPangle != null) {
-                interstitialAdPangle.show(activity);
-                interstitialAdPangle = null;
+       try {
+           if (counter >= interval) {
+               if (interstitialAdPangle != null) {
+                   interstitialAdPangle.show(activity);
+                   interstitialAdPangle = null;
 
-            } else {
-            }
-            LoadIntertitialAdmob(activity, selectAdsBackup, idIntertitial, idIntertitialBackup, Hpk1, Hpk2, Hpk3, Hpk4, Hpk5);
-            counter = 0;
-        } else {
-            counter++;
-        }
+               } else {
+               }
+               LoadIntertitialAdmob(activity, selectAdsBackup, idIntertitial, idIntertitialBackup, Hpk1, Hpk2, Hpk3, Hpk4, Hpk5);
+               counter = 0;
+           } else {
+               counter++;
+           }
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
+
     }
 
     public static void ShowIntertitialGoogleAds(Activity activity, String selectAdsBackup, String idIntertitial, String idIntertitialBackup,

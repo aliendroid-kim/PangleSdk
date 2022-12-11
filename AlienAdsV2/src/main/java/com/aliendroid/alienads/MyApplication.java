@@ -29,9 +29,14 @@ public class MyApplication extends Application {
                 .withPerformanceMetrics(FlurryPerformance.ALL)
                 .build(this,"W35KQ7HGRYQGT3Q9NDSH");
 
-        sdkads = new InitializeAlienAds(this);
-        alienOpenAds = new AlienOpenAds(this);
-        adManagerHolder = new AdManagerHolder(this);
+        try {
+            sdkads = new InitializeAlienAds(this);
+            alienOpenAds = new AlienOpenAds(this);
+            adManagerHolder = new AdManagerHolder(this);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try {
             PAGSdk.addPAGInitCallback(new PAGSdk.PAGInitCallback() {

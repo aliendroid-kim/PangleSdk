@@ -107,7 +107,7 @@
                 android:backgroundTint="@color/native_button"
                 android:textColor="@color/native_text_button"
                 android:textSize="10sp"
-                app:backgroundTint="@color/button_install"
+                app:backgroundTint="@color/native_button"
                 tools:ignore="TouchTargetSizeCheck"
                 tools:text="Install" />
 

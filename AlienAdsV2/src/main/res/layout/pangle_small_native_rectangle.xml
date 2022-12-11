@@ -105,10 +105,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@color/native_button"
-                android:backgroundTint="@color/colorPrimaryDark"
                 android:textColor="@android:color/white"
                 android:textSize="10sp"
-                app:backgroundTint="@color/colorPrimary"
+                app:backgroundTint="@color/native_button"
                 tools:ignore="TouchTargetSizeCheck"
                 tools:text="Install" />
 

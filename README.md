@@ -25,9 +25,10 @@ lalu tambahan Maven di Gradle Project
 <b>D. Pengaturan Iklan</b>
 1. Iklan di sematkan pada SELECT_MAIN_ADS ="ADMOB" dan SELECT_BACKUP_ADS="null"
 2. SWITCH_OPEN_ADS diisi angka 2 (non open ads Admob), jika diisi 1 maka aplikasi akan berhenti di halaman awal
-3. Masukan APP ID Pangle di bagian INITIALIZE_MAIN_ADS dan INITIALIZE_BACKUP_ADS 
+3. Masukan APP ID / Keys Pangle di bagian INITIALIZE_MAIN_ADS dan INITIALIZE_BACKUP_ADS 
 4. Isi semua ID Banner, Interstitial, Reward, Natives dibagian MAIN ADS
 5. isi null pada bagian BACKUP ADS
+6. ID test Pangles Banner = 980099802, Interstitial = 980088188, Natives = 980088216, Reward = 980099801, App ID / Keys = 8025677
 
  <b>E. Plus Minus Single dan Multy SDK Ads</b>
 <br />1. Multy Ads memiliki ukuran file 10-15mb dengan sistem switch, backup, open bidding dan mediasi, sehingga ukuran file akan menjadi lebih besar.

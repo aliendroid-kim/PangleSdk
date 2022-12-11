@@ -34,10 +34,10 @@ dependencies {
     implementation "androidx.multidex:multidex:2.0.1"
 
     implementation 'com.pangle.global:ads-sdk:4.7.0.3'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.flurry.android:analytics:14.0.0'
 
-    implementation 'com.flurry.android:analytics:13.3.0'
-
-    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 
 }

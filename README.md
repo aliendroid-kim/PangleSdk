@@ -17,7 +17,7 @@ dengan iklan Pangle / Tiktok Adnetwork
  <b>C. Cara Pasang </b>
 
 Ganti <b>implementation 'com.github.aliendroid-kim:AlienMultyAds:Neptunus-21'</b> yang ada di Gradle Module, 
-dengan <b>implementation ' implementation 'com.github.aliendroid-kim:PangleSdk:Portia-02'</b>
+dengan <b>implementation 'com.github.aliendroid-kim:PangleSdk:Portia-02'</b>
 
 lalu tambahan Maven di Gradle Project
  <b>maven { url'https://artifact.bytedance.com/repository/pangle/'} </b>
